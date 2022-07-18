@@ -1,9 +1,15 @@
 import React from 'react';
+import { MOCK_PROJECTS, fetchAllProjects } from "../../data/projects";
+import ProjectItem from "../../components/ProjectItem";
+import ProjectList from "../../components/ProjectList"
 
 function projectsPage() {
+    const projects = fetchAllProjects();
+    console.log(projects);
+
     return (
         <>
-            <h1>Featured Projects</h1>
+            <ProjectList projects={projects}/>
         </>
     );
 }

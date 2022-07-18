@@ -1,17 +1,12 @@
-import articleStyles from "../styles/Article.module.css"
-import ArticleItem from "./ArticleItem";
-import {fetchAllProjects} from "../data/projects";
+import ProjectItem from "./ProjectItem";
+import projectStyles from "../styles/Article.module.css"
 
-function projectList({ articles }) {
-    fetchAllProjects();
-
+function ProjectList({ projects }) {
     return (
-        <div className={articleStyles.grid}>
-            {articles.map(article =>
-                <ArticleItem article={article}/>
-            )}
-        </div>
+            <div className={projectStyles.grid}>
+                {projects.map(project => <ProjectItem project={project}/>)}
+            </div>
     );
 }
 
-export default projectList;
+export default ProjectList;

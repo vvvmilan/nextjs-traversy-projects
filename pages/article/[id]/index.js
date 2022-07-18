@@ -3,6 +3,7 @@ import {useRouter} from "next/router";
 function Index({ articles }) {
     const router = useRouter()
     const {id} = router.query
+    console.log(articles)
 
     return (
         <div>
